@@ -5,6 +5,6 @@ main :: IO ()
 main = do
  print $ add 5.1 2.1
 
- --Answer= 7.2
+ --Answer = 7.2
  
 
