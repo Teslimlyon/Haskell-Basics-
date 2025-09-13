@@ -1,10 +1,27 @@
-add :: Float -> Float -> Float
-add x y = x + y 
+numbee :: Int -> Int 
+number x = 42
 
 main :: IO ()
 main = do
- print $ add 5.1 2.1
+ print $ number 42 --Answer = 42
 
- --Answer = 7.2
+
+
+number :: Float -> Float
+number x = 3.14
+
+main :: IO ()
+main = do
+ print $ number 3.14 --Answer = 3.14
+
+ 
+
+add :: Float -> Float -> Float
+add x y = x + y 
+
+--main :: IO ()
+--main = do
+-- print $ add 5.1 2.1 --AAnswer = 7.2
+
  
 
