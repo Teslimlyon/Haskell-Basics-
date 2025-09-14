@@ -24,7 +24,15 @@ main = do
  print $ word "z" --Answer = z
  
            or
-word :: String
+           
+word :: String -> String
+word z = "z"
+
+main :: IO ()
+main = do
+ print $ word "z" --Answer = z
+
+ 
 
 add :: Float -> Float -> Float
 add x y = x + y 
