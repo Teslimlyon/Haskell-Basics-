@@ -21,6 +21,31 @@ doubleThenIncrement x = x * 2 + 1
 main :: IO ()
 main = do
   print $ doubleThenIncrement 200  -- Answer = 401
+
+
+    Pure Function Example
+    
+circleArea :: Float -> Float 
+circleArea x = pi 
+
+main :: IO ()
+main = do 
+ print $ circleArea pi -- Answer= 3.1415927
+ 
+circleArea :: Float -> Float 
+circleArea x = pi * x
+
+main :: IO ()
+main = do 
+ print $ circleArea 10 -- Answer = 31.415928
+
+
+circleArea :: Float -> Float -> Float
+circleArea x y = pi * x * y
+
+main :: IO ()
+main = do 
+ print $ circleArea 10 2  -- Answer = 62.831856
  
  
 greaterThan18 :: Int -> Bool
