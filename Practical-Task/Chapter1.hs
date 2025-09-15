@@ -1,70 +1,35 @@
-     Checking Types in GHCi
-     
-numbee :: Int -> Int 
-number x = 42
+Function Composition
+    
+double :: Int -> Int
+double x = x * 2 
 
 main :: IO ()
 main = do
- print $ number 42 --Answer = 42
+ print $ double 100  -- Answer = 200
 
 
-
-number :: Float -> Float
-number x = 3.14
+increment :: Int -> Int 
+increment x = x + 1
 
 main :: IO ()
 main = do
- print $ number 3.14 --Answer = 3.14
-
-
-
-word :: [Char] -> [Char]
-word z = "z"
-
-main :: IO () 
-main = do
- print $ word "z" --Answer = z
+ print $ increment 200 -- Answer = 201
  
-           or
-           
-word :: String -> String
-word z = "z"
+doubleThenIncrement :: Int -> Int 
+doubleThenIncrement x = x * 2 + 1 
 
 main :: IO ()
 main = do
- print $ word "z" --Answer = z
-
-     Function Type Signatures
-
-add :: Float -> Float -> Float
-add x y = x + y 
-
-main :: IO ()
-main = do
- print $ add 5.1 2.1 --AAnswer = 7.2
-
-
-
-isEven :: Int -> Bool
-isEven n = n `mod` 2 == 0
+  print $ doubleThenIncrement 200  -- Answer = 401
+ 
+ 
+greaterThan18 :: Int -> Bool
+greaterThan18 x = x >= 18
 
 main :: IO ()
 main = do 
- print $ isEven 2 --Answwr True
- print $ isEven 3 -- Answer False
- print $ isEven 100 -- Answer True
-
-
-
-concatStrings :: String -> String -> String
-concatStrings x y = x ++ y 
-
-main :: IO ()
-main = do 
- putStrLn (concatStrings "Teslim," "is a good boy")  -- Answer = Teslim is a good boy 
-
- 
-      Immutable Variables
-
+ print $ greaterThan18 18  --True
+ print $ greaterThan18 10  --Falsw
+ print $ greaterThan18 20  --True
 
       
