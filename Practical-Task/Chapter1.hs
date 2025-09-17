@@ -24,7 +24,9 @@ main = do
   print $ doubleThenIncrement 200  -- Answer = 401
 
 
-    Pure Function Example
+  --  HC1T2 - Task 2: Pure Function Example
+   
+    Write a function circleArea that calculates the area of a circle given the radius. Ensure that it’s pure and does not depend on any external state.
     
 circleArea :: Float -> Float 
 circleArea x = pi 
@@ -48,6 +50,9 @@ main :: IO ()
 main = do 
  print $ circleArea 10 2  -- Answer = 62.831856
  
+-- HC1T3 - Task 3: Checking if a Number is Greater than 18
+
+ Write a function greaterThan18 that checks whether a given number is greater than 18.
  
 greaterThan18 :: Int -> Bool
 greaterThan18 x = x >= 18
