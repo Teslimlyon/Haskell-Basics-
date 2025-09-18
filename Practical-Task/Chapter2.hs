@@ -102,8 +102,45 @@ main = do
  putStrLn (concatStrings "Teslim," "is a good boy")  --Output = Teslim is a good boy 
 
 --HC2T3 - Task 3: Immutable Variables
- myAge as an Int
 
+Define the following immutable variables in Haskell:
 
+    myAge as an Int
+  
+myAge :: Int
+myAge = 32
+
+main :: IO ()
+main = do 
+ print $ myAge  --Output 32
+ 
+     piValue as a Double
+ 
+piValue :: Double 
+piValue = pi
+
+main :: IO ()
+main = do 
+ print $ piValue   --Output 3.14
+ 
+    greeting as a String
+
+greeting :: String 
+greeting = "Good morning Teslim"
+
+main :: IO () 
+main = do 
+ putStrLn greeting --Good morning Teslim
+
+    isHaskellFun as a Bool
+
+isHaskellFun :: Bool
+isHaskellFun = True
+
+main :: IO ()
+main = do 
+ print $ isHaskellFun --Output True
+ 
+ 
 
 
