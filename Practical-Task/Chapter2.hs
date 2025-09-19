@@ -261,3 +261,32 @@ main :: IO ()
 main = do 
  print $ maxOfThree 10 4 2 -- Output = 12
  
+--HC2T6 - Task 6: Understanding Int vs Integer
+ 
+  Define an Int variable smallNumber with the value 262.
+
+smallNumber :: Int
+smallNumber = 2^62
+
+main :: IO ()
+main = do 
+ print $ smallNumber --Output = 4611686018427387904
+ 
+Define an Integer variable bigNumber with the value 2127.
+
+bigNumber :: Integer
+bigNumber = 2^127
+
+main :: IO ()
+main = do
+ print $ bigNumber  -- Output = 170141183460469231731687303715884105728
+ 
+ Try to evaluate 2^64 :: Int in GHCi and note the result.
+ 
+evaluate :: Int
+evaluate = 2^64
+
+main :: IO ()
+main = do
+ print $ evaluate --Output = 0
+ -- Note: Since 2^64 is exactly one full cycle of the Int range, you land back at 0.
