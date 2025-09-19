@@ -263,7 +263,7 @@ main = do
  
 --HC2T6 - Task 6: Understanding Int vs Integer
  
-  Define an Int variable smallNumber with the value 262.
+  Define an Int variable smallNumber with the value 2^62
 
 smallNumber :: Int
 smallNumber = 2^62
@@ -272,7 +272,7 @@ main :: IO ()
 main = do 
  print $ smallNumber --Output = 4611686018427387904
  
-Define an Integer variable bigNumber with the value 2127.
+Define an Integer variable bigNumber with the value 2^127
 
 bigNumber :: Integer
 bigNumber = 2^127
