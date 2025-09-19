@@ -209,5 +209,55 @@ expression x = True
 main :: IO ()
 main = do 
  print (True && False) --Output = True 
-    
 
+--HC2T5 - Task 5: Defining and Using Functions
+
+Write a function circleArea that takes a Float radius and returns the area of the circle.
+
+circleArea :: Floating a => a -> a
+circleArea r = pi * r
+
+main :: IO ()
+main = do 
+ print $ circleArea 10 --Output = 31.41592653589793
+ 
+ Write a function maxOfThree that takes three Int values and returns the maximum.
+maxOfThree :: Int -> Int -> Int -> Int
+maxOfThree x y z = x * y + z
+
+main :: IO ()
+main = do 
+ print $ maxOfThree 2 5 2 --Output = 12
+ 
+Test your functions with different inputs
+
+circleArea :: Floating a => a -> a
+circleArea r = pi * r
+
+main :: IO ()
+main = do 
+ print $ circleArea 100 --Output = 314.1592653589793
+
+
+maxOfThree :: Int -> Int -> Int -> Int
+maxOfThree a b c = a * b * c 
+
+main :: IO ()
+main = do 
+ print $ maxOfThree 2 2 2 -- Output = 8
+ 
+maxOfThree :: Int -> Int -> Int -> Int
+maxOfThree a b c = a + b * c 
+
+main :: IO ()
+main = do 
+ print $ maxOfThree 2 5 2 --Output = 12
+--my Output makes me realized that Haskell programing understand BODMAS and its uses  because many will think the output should be "14"
+
+maxOfThree :: Int -> Int -> Int -> Int 
+maxOfThree a b c = a + b `div` c
+
+main :: IO ()
+main = do 
+ print $ maxOfThree 10 4 2 -- Output = 12
+ 
