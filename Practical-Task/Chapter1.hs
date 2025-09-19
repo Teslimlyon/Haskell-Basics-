@@ -63,6 +63,20 @@ main = do
  print $ greaterThan18 10  --Falsw
  print $ greaterThan18 20  --True
 
+--HC1T5 - Task 5: Laziness in Haskell
+Create a function infiniteNumbers that generates an infinite list of numbers. Extract only the first n elements.
+
+infiniteNumbers :: [Integer]
+infiniteNumbers = [0..]
+
+extractFirstN :: Int -> [Integer]
+extractFirstN n = take n infiniteNumbers
+
+main :: IO ()
+main = do
+ print $ extractFirstN 10
+ -- Output =[0,1,2,3,4,5,6,7,8,9]
+
 --HC1T6 - Task 6: Using Type Signatures
 Define a function addNumbers that takes two integers and returns their sum.
 
