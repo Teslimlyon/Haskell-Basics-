@@ -63,4 +63,12 @@ main = do
  print $ greaterThan18 10  --Falsw
  print $ greaterThan18 20  --True
 
-      
+ --HC1T8 - Task 8: Higher-Order Functions
+Create a function applyTwice that applies a function twice to an input value.
+
+applyTwice :: (a -> a) -> a -> a
+applyTwice f x = f (f x)
+
+main :: IO ()
+main = do 
+ print (applyTwice (*10) 10)  --Output = 1000   
