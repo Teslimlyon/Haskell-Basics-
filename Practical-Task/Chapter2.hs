@@ -183,30 +183,31 @@ main = do
 
 Use infix notation for the following prefix functions:
 
---(+) 7 2
---(*) 6 5
---(&&) True False
--- Solution to the above:
+(+) 7 2
+(*) 6 5
+(&&) True False
+
+ Solution to the above:
  
---myFunc :: Int -> Int
---myFunc x = x
+myFunc :: Int -> Int
+myFunc x = x
 
---main :: IO ()
---main = do
--- print (7 + 2) --Output = 9
+main :: IO ()
+main = do
+ print (7 + 2) --Output = 9
 
---myFunc :: Int -> Int
---myFunc x = x
+myFunc :: Int -> Int
+myFunc x = x
 
---main :: IO ()
---main = do 
- --print (6 * 5) --Outut = 30
+main :: IO ()
+main = do 
+ print (6 * 5) --Outut = 30
  
 expression :: Int -> Bool
 expression x = True
 
 main :: IO ()
 main = do 
- print (True && False)
+ print (True && False) --Output = True 
     
 
