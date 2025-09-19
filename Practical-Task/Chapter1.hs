@@ -63,6 +63,18 @@ main = do
  print $ greaterThan18 10  --Falsw
  print $ greaterThan18 20  --True
 
+--HC1T6 - Task 6: Using Type Signatures
+Define a function addNumbers that takes two integers and returns their sum.
+
+addNumbers :: Int -> Int -> Int
+addNumbers x y = x + y
+
+
+main :: IO ()
+main = do
+    print (addNumbers 5 7)   -- Output: 12
+    print (addNumbers 10 20) -- Output: 30
+
 --HC1T7 - Task 7: Converting Fahrenheit to Celsius
 Write a function fToC that converts Fahrenheit to Celsius.
 
