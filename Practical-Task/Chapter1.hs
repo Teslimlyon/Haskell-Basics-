@@ -63,6 +63,26 @@ main = do
  print $ greaterThan18 10  --Falsw
  print $ greaterThan18 20  --True
 
+--HC1T7 - Task 7: Converting Fahrenheit to Celsius
+Write a function fToC that converts Fahrenheit to Celsius.
+
+fToC :: Double -> Double 
+fToC f = ( f - 32 ) * 5 / 9
+
+main :: IO ()
+main = do 
+ print (fToC 120) --Output = 48.888888888888886
+
+ To convert Celsius nack to Fahrenheit
+ 
+celsius :: Double -> Double 
+celsius c = ( c * 9 ) / 5 + 32
+
+main :: IO ()
+main = do
+ print (celsius 48.888888888888886)
+ --Output = 120.0
+ 
  --HC1T8 - Task 8: Higher-Order Functions
 Create a function applyTwice that applies a function twice to an input value.
 
