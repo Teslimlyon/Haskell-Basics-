@@ -8,7 +8,7 @@
 True && False
      Solution to the above :
      
-numbee :: Int -> Int 
+number :: Int -> Int 
 number x = 42
 
 main :: IO ()
