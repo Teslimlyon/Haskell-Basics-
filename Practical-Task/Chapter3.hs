@@ -42,3 +42,7 @@ main = do
   print (grade 95)
   print (grade 72)
   print (grade 50)
+    --Output :A
+      --      C
+       --     F
+    
