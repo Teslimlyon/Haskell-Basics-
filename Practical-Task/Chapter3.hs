@@ -1,4 +1,4 @@
-HC3T1 - Task 1: Check if a number is positive, negative, or zero
+--HC3T1 - Task 1: Check if a number is positive, negative, or zero
 
 Define a function checkNumber :: Int -> String.
 Use an if-then-else statement to check if the number is positive, negative, or zero.
