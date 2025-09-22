@@ -23,10 +23,16 @@ main = do
            --Negative
            --Zero
 
+--HC3T2 - Task 2: Determine the grade based on a score using guards
 
-
-
-
+Define a function grade :: Int -> String.
+Use guards (|) to classify scores into grades:
+90 and above: "A"
+80 to 89: "B"
+70 to 79: "C"
+60 to 69: "D"
+Below 60: "F"
+Test your function with grade 95, grade 72, and grade 50.
 
 
 grade :: Int -> String
