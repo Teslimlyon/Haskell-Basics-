@@ -333,3 +333,14 @@ main :: IO ()
 main = do
   print (notFunction False)
     -- Output True 
+
+
+--Write Boolean expressions that evaluate
+--comparison that returns False
+compareNumbers :: Int -> Int -> Bool
+compareNumbers x y  = x > y
+
+main :: IO ()
+main = do
+  print (compareNumbers 500 900)
+     --Output False 
