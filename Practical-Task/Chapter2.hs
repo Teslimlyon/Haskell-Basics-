@@ -291,3 +291,23 @@ main :: IO ()
 main = do
  print $ evaluate --Output = 0
  -- Note: Since 2^64 is exactly one full cycle of the Int range, you land back at 0.
+
+
+--HC2T7 - Task 7: Boolean Expressions
+Write Boolean expressions that evaluate to:
+
+True using &&
+False using ||
+True using not
+A comparison that returns False
+
+
+--Write Boolean expressions
+--that evaluate True using &&
+andFunction :: Bool -> Bool -> Bool
+andFunction x y = x && y
+
+main :: IO ()
+main = do
+  print (andFunction True True)
+    --Output True 
