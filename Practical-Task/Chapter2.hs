@@ -322,3 +322,14 @@ main :: IO ()
 main = do
   print (function False False)
    --Output False
+
+
+--Write Boolean expressions 
+--that evaluate true using not
+notFunction :: Bool -> Bool
+notFunction x = not x
+
+main :: IO ()
+main = do
+  print (notFunction False)
+    -- Output True 
