@@ -311,3 +311,14 @@ main :: IO ()
 main = do
   print (andFunction True True)
     --Output True 
+
+
+--Write Boolean expressions that 
+--evaluate False using ||
+function :: Bool -> Bool -> Bool
+function x y = x || y
+
+main :: IO ()
+main = do
+  print (function False False)
+   --Output False
