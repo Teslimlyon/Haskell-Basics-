@@ -49,6 +49,18 @@ circleArea x y = pi * x * y
 main :: IO ()
 main = do 
  print $ circleArea 10 2  -- Answer = 62.831856
+
+
+circleArea :: (Real a, Floating b) => a -> b
+circleArea r = pi * (realToFrac r) * (realToFrac r)
+
+main :: IO ()
+main = do
+  print (circleArea (5 :: Int))      -- 78.53981633974483
+  print (circleArea (10 :: Integer)) -- 314.1592653589793
+  print (circleArea (7.5 :: Float))  -- 176.71458676442586
+  print (circleArea (3.2 :: Double)) -- 32.169908772759484
+
  
 -- HC1T3 - Task 3: Checking if a Number is Greater than 18
 
