@@ -75,3 +75,27 @@ main :: IO ()
 main = do
   putStrLn $ "rgbToHex (255, 0, 127) = " ++ rgbToHex (255, 0, 127)
   putStrLn $ "rgbToHex (0, 255, 64)  = " ++ rgbToHex (0, 255, 64)
+
+
+To convert Hex back to RGB 
+
+
+import Numeric (readHex)
+
+-- Convert Hex to RGB
+hexToRgb :: String -> (Int, Int, Int)
+hexToRgb ('#':xs) = hexToRgb xs   
+hexToRgb hex =
+  let (rHex, rest1) = splitAt 2 hex
+      (gHex, bHex)  = splitAt 2 rest1
+      [(r, _)] = readHex rHex
+      [(g, _)] = readHex gHex
+      [(b, _)] = readHex bHex
+  in (r, g, b)
+
+-- Main function for testing only hexToRgb
+main :: IO ()
+main = do
+  putStrLn "Testing hexToRgb:"
+  print $ hexToRgb "FF007F"
+  print $ hexToRgb "#00FF40"
