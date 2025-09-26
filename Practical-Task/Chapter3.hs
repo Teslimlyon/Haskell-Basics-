@@ -99,3 +99,19 @@ main = do
   putStrLn "Testing hexToRgb:"
   print $ hexToRgb "FF007F"
   print $ hexToRgb "#00FF40"
+
+
+
+triangleType :: Float -> Float -> Float -> String
+triangleType x y z = 
+   if x == y && y == z
+   then "Equilateral"
+   else if x == y || y == z || x == z
+   then "Isosceles"
+   else "Scalene"
+
+main :: IO ()
+main = do 
+ putStrLn (triangleType 3 3 3)
+ putStrLn (triangleType 5 5 8)
+ putStrLn (triangleType 6 7 8)
