@@ -101,6 +101,14 @@ main = do
   print $ hexToRgb "#00FF40"
 
 
+HC3T5 - Task 5: Determine the type of a triangle using guards
+
+Define a function triangleType :: Float -> Float -> Float -> String.
+Use guards to classify the triangle:
+All sides equal: "Equilateral"
+Two sides equal: "Isosceles"
+No sides equal: "Scalene"
+Test with triangleType 3 3 3, triangleType 5 5 8, and triangleType 6 7 8.
 
 triangleType :: Float -> Float -> Float -> String
 triangleType x y z = 
