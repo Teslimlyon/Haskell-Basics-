@@ -235,3 +235,16 @@ main :: IO ()
 main = do
   print $ maxOfThree 10 20 15   -- Expected: 20
   print $ maxOfThree 5 25 10    -- Expected: 25
+
+
+isPalindrome :: String -> Bool
+isPalindrome str
+  | length str <= 1 = True
+  | head str == last str = isPalindrome (init (tail str))
+  | otherwise = False
+
+main :: IO ()
+main = do
+  print $ isPalindrome "racecar"   -- Expected: True
+  print $ isPalindrome "haskell"   -- Expected: False
+  print $ isPalindrome "madam"     -- Expected: True
