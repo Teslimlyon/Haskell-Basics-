@@ -167,3 +167,20 @@ main = do
   print (isLeapYear 2000)  -- True (divisible by 400)
   print (isLeapYear 1900)  -- False (divisible by 100 but not 400)
   print (isLeapYear 2024)  -- True (divisible by 4 but not 100)
+
+
+
+
+season :: Int -> String
+season m
+  | m == 12 || m == 1 || m == 2  = "Winter"
+  | m == 3  || m == 4 || m == 5  = "Spring"
+  | m == 6  || m == 7 || m == 8  = "Summer"
+  | m == 9  || m == 10 || m == 11 = "Autumn"
+  | otherwise = "Invalid month"
+
+main :: IO ()
+main = do
+  print (season 3)   -- "Spring"
+  print (season 7)   -- "Summer"
+  print (season 11)  -- "Autumn"
