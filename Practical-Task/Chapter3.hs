@@ -195,6 +195,14 @@ main = do
 
 --HC3T8 - Advanced Task 8: Calculate BMI and return category using where
 
+Define bmiCategory :: Float -> Float -> String.
+Use where to calculate BMI: bmi = weight / height^2.
+Use guards to classify BMI:
+<18.5: "Underweight"
+18.5 to 24.9: "Normal"
+25 to 29.9: "Overweight"
+≥30: "Obese"
+Test with bmiCategory 70 1.75 and bmiCategory 90 1.8.
 
 
 bmiCategory :: Float -> Float -> String
