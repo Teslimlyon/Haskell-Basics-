@@ -215,8 +215,8 @@ bmiCategory weight height
 
 main :: IO ()
 main = do
-  print $ bmiCategory 70 1.75   -- Expected: "Normal"
-  print $ bmiCategory 90 1.8    -- Expected: "Overweight"
+  print $ bmiCategory 70 1.75   -- Output: "Normal"
+  print $ bmiCategory 90 1.8    -- Output: "Overweight"
 
 --HC3T9 - Advanced Task 9: Find the maximum of three numbers using let
 
@@ -233,12 +233,18 @@ maxOfThree x y z =
 
 main :: IO ()
 main = do
-  print $ maxOfThree 10 20 15   -- Expected: 20
-  print $ maxOfThree 5 25 10    -- Expected: 25
+  print $ maxOfThree 10 20 15   -- Output: 20
+  print $ maxOfThree 5 25 10    -- Output: 25
 
 
-HC3T10 - Advanced Task 10: Check if a string is a palindrome using recursion and guards
+--HC3T10 - Advanced Task 10: Check if a string is a palindrome using recursion and guards
 
+Define isPalindrome :: String -> Bool.
+Use guards:
+If the string has 0 or 1 characters: True
+If the first and last characters match, recursively check the rest.
+Otherwise, return False.
+Test with isPalindrome "racecar", isPalindrome "haskell", and isPalindrome "madam".
 
 isPalindrome :: String -> Bool
 isPalindrome str
@@ -248,6 +254,6 @@ isPalindrome str
 
 main :: IO ()
 main = do
-  print $ isPalindrome "racecar"   -- Expected: True
-  print $ isPalindrome "haskell"   -- Expected: False
-  print $ isPalindrome "madam"     -- Expected: True
+  print $ isPalindrome "racecar"   -- Output: True
+  print $ isPalindrome "haskell"   -- Output: False
+  print $ isPalindrome "madam"     -- Output: True
