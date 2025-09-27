@@ -219,3 +219,17 @@ main :: IO ()
 main = do
   print $ bmiCategory 70 1.75   -- Expected: "Normal"
   print $ bmiCategory 90 1.8    -- Expected: "Overweight"
+
+
+
+maxOfThree :: Int -> Int -> Int -> Int
+maxOfThree x y z =
+  let maxXY = max x y
+      maxXYZ = max maxXY z
+  in maxXYZ
+
+-- Testing
+main :: IO ()
+main = do
+  print $ maxOfThree 10 20 15   -- Expected: 20
+  print $ maxOfThree 5 25 10    -- Expected: 25
