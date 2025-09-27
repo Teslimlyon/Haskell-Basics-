@@ -237,6 +237,9 @@ main = do
   print $ maxOfThree 5 25 10    -- Expected: 25
 
 
+HC3T10 - Advanced Task 10: Check if a string is a palindrome using recursion and guards
+
+
 isPalindrome :: String -> Bool
 isPalindrome str
   | length str <= 1 = True
