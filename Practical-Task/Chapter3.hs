@@ -170,6 +170,14 @@ main = do
 
 --HC3T7 - Advanced Task 7: Determine the season based on the month using guards
 
+Define season :: Int -> String.
+Use guards to return:
+12, 1, 2 → "Winter"
+3, 4, 5 → "Spring"
+6, 7, 8 → "Summer"
+9, 10, 11 → "Autumn"
+Test with season 3, season 7, and season 11.
+
 
 season :: Int -> String
 season m
