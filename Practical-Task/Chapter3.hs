@@ -143,8 +143,13 @@ main = do
 
 --HC3T6 - Advanced Task 6: Check leap year using if-then-else
 
-
-
+Define isLeapYear :: Int -> Bool.
+Use if-then-else to check:
+Divisible by 400: True
+Divisible by 100 but not 400: False
+Divisible by 4: True
+Otherwise: False
+Test with isLeapYear 2000, isLeapYear 1900, and isLeapYear 2024.
 
 
 isLeapYear :: Int -> Bool
