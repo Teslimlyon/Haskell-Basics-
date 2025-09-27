@@ -101,6 +101,17 @@ main = do
   print $ hexToRgb "#00FF40"
 
 
+triangleArea :: Float -> Float -> Float -> Float
+triangleArea a b c =
+  let s = (a + b + c) / 2
+  in sqrt (s * (s - a) * (s - b) * (s - c))
+
+main :: IO ()
+main = do
+  print (triangleArea 3 4 5)   -- should return 6.0
+  print (triangleArea 7 8 9)   -- should return ~26.83
+
+
 HC3T5 - Task 5: Determine the type of a triangle using guards
 
 Define a function triangleType :: Float -> Float -> Float -> String.
