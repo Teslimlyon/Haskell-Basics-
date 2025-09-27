@@ -141,6 +141,9 @@ main = do
  putStrLn (triangleType 5 5 8)
  putStrLn (triangleType 6 7 8)
 
+--HC3T6 - Advanced Task 6: Check leap year using if-then-else
+
+
 
 
 
