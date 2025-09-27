@@ -22,6 +22,22 @@ doubleThenIncrement x = x * 2 + 1
 main :: IO ()
 main = do
   print $ doubleThenIncrement 200  -- Answer = 401
+       
+        or 
+
+double :: Int -> Int 
+double x = x * 2
+
+increment :: Int -> Int 
+increment x = x + 1 
+
+doubleThenincrement :: Int -> Int 
+doubleThenincrement x = increment (double x)
+
+main :: IO ()
+main = do 
+ print $ doubleThenincrement 100
+   --Output 201
 
 
   --  HC1T2 - Task 2: Pure Function Example
