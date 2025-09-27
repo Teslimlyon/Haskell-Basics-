@@ -168,7 +168,7 @@ main = do
   print (isLeapYear 1900)  -- False (divisible by 100 but not 400)
   print (isLeapYear 2024)  -- True (divisible by 4 but not 100)
 
-
+--HC3T7 - Advanced Task 7: Determine the season based on the month using guards
 
 
 season :: Int -> String
