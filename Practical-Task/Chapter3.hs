@@ -193,7 +193,7 @@ main = do
   print (season 7)   -- "Summer"
   print (season 11)  -- "Autumn"
 
-
+--HC3T8 - Advanced Task 8: Calculate BMI and return category using where
 
 
 
