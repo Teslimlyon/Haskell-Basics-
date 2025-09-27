@@ -220,7 +220,7 @@ main = do
   print $ bmiCategory 70 1.75   -- Expected: "Normal"
   print $ bmiCategory 90 1.8    -- Expected: "Overweight"
 
-
+HC3T9 - Advanced Task 9: Find the maximum of three numbers using let
 
 maxOfThree :: Int -> Int -> Int -> Int
 maxOfThree x y z =
