@@ -93,7 +93,6 @@ hexToRgb hex =
       [(b, _)] = readHex bHex
   in (r, g, b)
 
--- Main function for testing only hexToRgb
 main :: IO ()
 main = do
   putStrLn "Testing hexToRgb:"
@@ -214,7 +213,6 @@ bmiCategory weight height
   where
     bmi = weight / (height ^ 2)
 
--- Testing
 main :: IO ()
 main = do
   print $ bmiCategory 70 1.75   -- Expected: "Normal"
@@ -233,7 +231,6 @@ maxOfThree x y z =
       maxXYZ = max maxXY z
   in maxXYZ
 
--- Testing
 main :: IO ()
 main = do
   print $ maxOfThree 10 20 15   -- Expected: 20
