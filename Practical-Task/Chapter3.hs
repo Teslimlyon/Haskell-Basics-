@@ -100,6 +100,12 @@ main = do
   print $ hexToRgb "FF007F"
   print $ hexToRgb "#00FF40"
 
+HC3T4 - Task 4: Calculate the area of a triangle using Heron's formula
+Define a function triangleArea :: Float -> Float -> Float -> Float.
+Use let to calculate the semi-perimeter s.
+Apply Heron’s formula: sqrt(s * (s - a) * (s - b) * (s - c)).
+Test with triangleArea 3 4 5 and triangleArea 7 8 9.
+
 
 triangleArea :: Float -> Float -> Float -> Float
 triangleArea a b c =
