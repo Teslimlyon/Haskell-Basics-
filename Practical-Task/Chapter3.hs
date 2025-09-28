@@ -279,3 +279,20 @@ main = do
   print $ isPalindrome "racecar"   -- Output: True
   print $ isPalindrome "haskell"   -- Output: False
   print $ isPalindrome "madam"     -- Output: True
+
+
+
+isPalindrome :: String -> Bool
+isPalindrome str
+  | length str <= 1 = True
+  | head str == last str = isPalindrome (init (tail str))
+  | otherwise = False
+
+main :: IO ()
+main = do
+  print $ isPalindrome "racecar"
+  print $ isPalindrome "Teslim"
+  print $ isPalindrome "madam"
+   --Output: True
+         --  False
+         --  True 
