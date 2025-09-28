@@ -310,7 +310,7 @@ Let’s check manually:
 
 Since "Teslim" ≠ "milesT", it is not a palindrome, so the function correctly returns False.
 
-           
+           OR
 
 -- Function to check if a string is a palindrome
 isPalindrome :: String -> Bool
