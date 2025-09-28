@@ -214,6 +214,24 @@ main = do
   print (season 7)   -- "Summer"
   print (season 11)  -- "Autumn"
 
+
+season :: Int -> String
+season m =
+  if m == 12 || m == 1 || m == 2 then "Winter"
+  else if m == 3 || m == 4 || m == 5 then "Spring"
+  else if m == 6 || m == 7 || m == 8 then "Summer"
+  else if m == 9 || m == 10 || m == 11 then "Autumn"
+  else "Invalid month"
+
+main :: IO ()
+main = do
+  print (season 3) 
+  print (season 7) 
+  print (season 11)  
+  print (season 15)
+
+
+
 --HC3T8 - Advanced Task 8: Calculate BMI and return category using where
 
 Define bmiCategory :: Float -> Float -> String.
