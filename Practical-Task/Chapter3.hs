@@ -296,3 +296,16 @@ main = do
    --Output: True
          --  False
          --  True 
+
+Note:
+
+Teslim" prints False because a palindrome requires the string to read the same forwards and backwards.
+
+Let’s check manually:
+
+"Teslim" forward → T e s l i m
+
+"Teslim" backward → m i l s e T
+
+
+Since "Teslim" ≠ "milesT", it is not a palindrome, so the function correctly returns False.
