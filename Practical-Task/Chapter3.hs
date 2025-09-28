@@ -121,8 +121,22 @@ triangleArea a b c =
 
 main :: IO ()
 main = do
-  print (triangleArea 3 4 5)   -- should return 6.0
-  print (triangleArea 7 8 9)   -- should return ~26.83
+  print (triangleArea 3 4 5) 
+  print (triangleArea 7 8 9)  
+ --Output 6.0
+ --Output 26.83
+
+triangleArea :: Float -> Float -> Float -> Float
+triangleArea a b c =
+  let s = (a + b + c) / 2
+  in sqrt (s * (s - a) * (s - b) * (s - c))
+
+main :: IO ()
+main = do
+  print (triangleArea 5 5 2)
+  print (triangleArea 5 8 9)
+   --Output 4.8989797
+         -- 19.899748
 
 
 HC3T5 - Task 5: Determine the type of a triangle using guards
