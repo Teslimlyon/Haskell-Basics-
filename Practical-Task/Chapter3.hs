@@ -62,6 +62,7 @@ Concatenate the three hex values into a single string.
 Test your function with rgbToHex (255, 0, 127) and rgbToHex (0, 255, 64).
 
 
+--Conver RGB to Hex
 import Text.Printf (printf)
 
 rgbToHex :: (Int, Int, Int) -> String
@@ -73,8 +74,11 @@ rgbToHex (r, g, b) =
 
 main :: IO ()
 main = do
-  putStrLn $ "rgbToHex (255, 0, 127) = " ++ rgbToHex (255, 0, 127)
-  putStrLn $ "rgbToHex (0, 255, 64)  = " ++ rgbToHex (0, 255, 64)
+  print $ rgbToHex (255, 0, 127)
+  print $ rgbToHex (0, 255, 64)
+ 
+  --Output:"FF007F"
+    --     "00FF40"
 
 
 To convert Hex back to RGB 
