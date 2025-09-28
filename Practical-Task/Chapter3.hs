@@ -309,3 +309,20 @@ Let’s check manually:
 
 
 Since "Teslim" ≠ "milesT", it is not a palindrome, so the function correctly returns False.
+
+           OR
+
+-- Function to check if a string is a palindrome
+isPalindrome :: String -> Bool
+isPalindrome str = str == reverse str
+
+main :: IO ()
+main = do
+    print $ isPalindrome "madam"      
+    print $ isPalindrome "racecar"    
+    print $ isPalindrome "haskell"    
+    print $ isPalindrome "ada"    
+     --Output True
+            --True
+            --False
+            --Trur
