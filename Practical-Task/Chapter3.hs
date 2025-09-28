@@ -81,12 +81,12 @@ main = do
     --     "00FF40"
 
 
+
 To convert Hex back to RGB 
 
-
+--Convert Hex to RGB 
 import Numeric (readHex)
 
--- Convert Hex to RGB
 hexToRgb :: String -> (Int, Int, Int)
 hexToRgb ('#':xs) = hexToRgb xs   
 hexToRgb hex =
@@ -99,9 +99,13 @@ hexToRgb hex =
 
 main :: IO ()
 main = do
-  putStrLn "Testing hexToRgb:"
   print $ hexToRgb "FF007F"
   print $ hexToRgb "#00FF40"
+  
+  --Output (255,0,127)
+        -- (0,255,64)
+
+
 
 --HC3T4 - Task 4: Calculate the area of a triangle using Heron's formula
 Define a function triangleArea :: Float -> Float -> Float -> Float.
