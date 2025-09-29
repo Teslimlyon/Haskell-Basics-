@@ -30,3 +30,19 @@ It's a bright and beautiful day!
 Weather unknown
 A bit gloomy, but no rain yet!
 
+       --Using guide 
+
+
+weatherReport :: String -> String
+weatherReport condition
+    | condition == "sunny"  = "It's a bright and beautiful day!"
+    | condition == "rainy"  = "Don't forget your umbrella!"
+    | condition == "cloudy" = "A bit gloomy, but no rain yet!"
+    | otherwise             = "Weather unknown"
+
+main :: IO ()
+main = do
+    putStrLn (weatherReport "rainy")
+    putStrLn (weatherReport "sunny")
+    putStrLn (weatherReport "teslim")
+    putStrLn (weatherReport "cloudy")
