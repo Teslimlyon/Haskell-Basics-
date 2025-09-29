@@ -25,4 +25,8 @@ main = do
  putStrLn (weatherReport "teslim")
  putStrLn (weatherReport "cloudy")
  
+--Output:Don't forget your umbrella!
+    --   It's a bright and beautiful day!
+    --   Weather unknown
+    --   A bit gloomy, but no rain yet!
 
