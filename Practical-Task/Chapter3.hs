@@ -270,6 +270,23 @@ main = do
   print $ bmiCategory 70 1.75   -- Output: "Normal"
   print $ bmiCategory 90 1.8    -- Output: "Overweight"
 
+    -- using let 
+
+bmiCategory :: Float -> Float -> String
+bmiCategory weight height =
+  let bmi = weight / (height ^ 2)
+  in if bmi < 18.5 then "Underweight"
+     else if bmi < 25 then "Normal"
+     else if bmi < 30 then "Overweight"
+     else "Obese"
+
+main :: IO ()
+main = do
+  print $ bmiCategory 70 1.75   -- Output: "Normal"
+  print $ bmiCategory 90 1.8    -- Output: "Overweight"
+
+
+
 --HC3T9 - Advanced Task 9: Find the maximum of three numbers using let
 
 Define maxOfThree :: Int -> Int -> Int -> Int.
