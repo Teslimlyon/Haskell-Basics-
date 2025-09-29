@@ -80,6 +80,18 @@ main = do
   --Output:"FF007F"
     --     "00FF40"
 
+import Text.Printf (printf)
+
+rgbToHex :: (Int, Int, Int) -> String 
+rgbToHex (r, g, b) = printf "#%02X%02X%02X" r g b
+
+main :: IO ()
+main = do 
+ print $ rgbToHex (255, 0, 127)
+ print $ rgbToHex (0, 255, 64)
+
+   --Output:"FF007F"
+    --     "00FF40"
 
 
 To convert Hex back to RGB 
