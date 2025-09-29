@@ -46,3 +46,20 @@ main = do
     putStrLn (weatherReport "sunny")
     putStrLn (weatherReport "teslim")
     putStrLn (weatherReport "cloudy")
+
+
+
+
+dayType :: String -> String
+dayType day =
+  if day `elem` ["Saturday", "Sunday"]
+  then "Weekend"
+  else if day `elem` ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
+  then "Weekday"
+  else "Invalid day"
+
+main :: IO ()
+main = do
+  print $ dayType "Monday"    
+  print $ dayType "Saturday"
+  print $ dayType "Teslim"  
