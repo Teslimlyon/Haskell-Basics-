@@ -113,3 +113,25 @@ main = do
          --Excellent
          --passed
          --Better luck next time 
+
+gradeComment :: Int -> String
+gradeComment grade =
+ if grade `elem` [90..100] then "Excellent"
+ else if grade `elem` [70..89] then "Good job"
+ else if grade `elem` [50..69] then "passed"
+ else if grade `elem` [0..49] then "Better luck next time."
+ else "Invalid grade"
+ 
+main :: IO ()
+main = do 
+ putStrLn (gradeComment 75)
+ putStrLn (gradeComment (-30))
+ putStrLn (gradeComment 91)
+ putStrLn (gradeComment 52)
+ putStrLn (gradeComment 25)
+  -- Outputs:
+         --Good job
+         --invalid grade 
+         --Excellent
+         --passed
+         --Better luck next time 
