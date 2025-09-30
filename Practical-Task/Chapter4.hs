@@ -49,6 +49,7 @@ main = do
 
 
 HC4T2 - Task 2: Define a dayType Function
+
 Create a function dayType :: String -> String that determines if a given day of the week is a weekday or weekend.
 "Saturday" and "Sunday" → "It's a weekend!"
 Any other day of the week → "It's a weekday."
