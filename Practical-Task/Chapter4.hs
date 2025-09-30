@@ -69,3 +69,20 @@ main = do
   print $ dayType "Monday"    
   print $ dayType "Saturday"
   print $ dayType "Teslim"  
+
+    using guide |
+
+dayType :: String -> String
+dayType day 
+  | day `elem` ["Saturday", "Sunday"] = "weekend"
+  | day `elem` ["Monday", "Tuesday", " Wednesday", "Thursday", "Friday"] = "weekday"
+  | otherwise = "invalid day"
+  
+main :: IO ()
+main = do
+ putStrLn (dayType "Saturday")
+ putStrLn (dayType "Monday")
+ putStrLn (dayType "Teslim")
+  --Output weekend 
+        -- weekday 
+        -- invalid day
