@@ -87,6 +87,27 @@ main = do
         -- weekday 
         -- invalid day
 
+    using 
+
+dayType :: String -> String
+dayType "Monday"    = "weekday"
+dayType "Tuesday"   = "weekday"
+dayType "Wednesday" = "weekday"
+dayType "Thursday"  = "weekday"
+dayType "Friday"    = "weekday"
+dayType "Saturday"  = "weekend"
+dayType "Sunday"    = "weekend"
+dayType _           = "invalid day"
+
+main :: IO ()
+main = do
+    putStrLn (dayType "Monday") 
+    putStrLn (dayType "Sunday")     
+    putStrLn (dayType "Teslim") 
+      --Output weekday
+            -- weekend 
+            -- invalid day
+
 
 --HC4T3 - Task 3: Define a gradeComment Function
 
