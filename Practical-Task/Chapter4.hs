@@ -145,3 +145,29 @@ main = do
          --Excellent
          --passed
          --Better luck next time 
+
+    using guide |
+
+gradeComment :: Int -> String
+gradeComment grade 
+  | grade `elem` [90..100] = "Excellent"
+  | grade `elem` [70..89]  = "Good Job"
+  | grade `elem` [50..69]  = "passed"
+  | grade `elem` [0..49]   = "Better luck next time."
+  | otherwise              = "invalid grade"
+  
+main :: IO ()
+main = do 
+ putStrLn (gradeComment (-30))
+ putStrLn (gradeComment 92)
+ putStrLn (gradeComment 75)
+ putStrLn (gradeComment 62)
+ putStrLn (gradeComment 35)
+ 
+
+  -- Outputs:
+         --invalid grade 
+         --Excellent
+         --Good Job 
+         --passed
+         --Better luck next time 
