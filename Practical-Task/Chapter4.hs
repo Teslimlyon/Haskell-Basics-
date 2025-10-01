@@ -87,7 +87,7 @@ main = do
         -- weekday 
         -- invalid day
 
-    using 
+    using Pattern Matching
 
 dayType :: String -> String
 dayType "Monday"    = "weekday"
