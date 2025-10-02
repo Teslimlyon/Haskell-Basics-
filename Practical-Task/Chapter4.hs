@@ -225,6 +225,9 @@ main = do
  putStrLn (specialBirthday 1)
  
 
+--HC4T5 - Task 5: Add a Catch-All Pattern with a Custom Message
+Modify specialBirthday to include the age in the return message when it doesn’t match predefined cases.
+
 specialBirthday :: Int -> String
 specialBirthday 1  = "First birthday in 2025!"
 specialBirthday 18 = "18th birthday in 2025!"
