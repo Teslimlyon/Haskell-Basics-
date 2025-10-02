@@ -193,7 +193,7 @@ main = do
          --passed
          --Better luck next time 
 
-
+HC4T4 - Task 4: Rewrite specialBirthday using Pattern Matching
 
 specialBirthday :: Int -> String
 specialBirthday 1  = "First birthday in 2025!"
