@@ -224,3 +224,21 @@ main = do
  putStrLn (specialBirthday 18)
  putStrLn (specialBirthday 1)
  
+
+specialBirthday :: Int -> String
+specialBirthday 1  = "First birthday in 2025!"
+specialBirthday 18 = "18th birthday in 2025!"
+specialBirthday 50 = "Golden jubilee birthday!"
+specialBirthday age = "age" ++ show age ++ "Not a special birthday."
+
+main :: IO ()
+main = do
+  putStrLn (specialBirthday 25)
+  putStrLn (specialBirthday 50)
+  putStrLn (specialBirthday 18)
+  putStrLn (specialBirthday 1)
+    --Output:
+     --  age25Not a special birthday.
+     --Golden jubilee birthday!
+     --18th birthday in 2025!
+     --First birthday in 2025!
