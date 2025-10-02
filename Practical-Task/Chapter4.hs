@@ -266,3 +266,18 @@ main = do
      --Golden jubilee birthday!
      --18th birthday in 2025!
      --First birthday in 2025!
+
+
+whatsInsideThisList :: [Int] -> String 
+whatsInsideThisList [] = "The list is empty."
+whatsInsideThisList [x] = "The list has one element: " ++ show x 
+whatsInsideThisList [x, y] = "The list has two elements: " ++ show x ++ " and " ++ show y
+whatsInsideThisList (x:y:z:_) = "The list has three or more elements. First three are: " 
+                                ++ show x ++ ", " ++ show y ++ ", " ++ show z
+
+main :: IO ()
+main = do 
+  putStrLn (whatsInsideThisList [])
+  putStrLn (whatsInsideThisList [5])
+  putStrLn (whatsInsideThisList [1, 2])
+  putStrLn (whatsInsideThisList [1, 2, 3, 4])
