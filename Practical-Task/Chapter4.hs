@@ -241,7 +241,7 @@ main = do
   putStrLn (specialBirthday 18)
   putStrLn (specialBirthday 1)
     --Output:
-     --  age25Not a special birthday.
+     --  Age 25 Not a special birthday.
      --Golden jubilee birthday!
      --18th birthday in 2025!
      --First birthday in 2025!
