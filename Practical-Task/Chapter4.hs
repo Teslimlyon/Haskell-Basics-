@@ -192,3 +192,19 @@ main = do
          --Good Job 
          --passed
          --Better luck next time 
+
+
+specialBirthday :: Int -> String
+specialBirthday age 
+  | age == 1 = "First birthday in 2025 !"
+  | age == 18 = "18th birthday in 2025 !"
+  | age == 50 = "Golden jubilee birthday!"
+  | otherwise = "Not a special birthday."
+  
+main :: IO ()
+main = do
+ putStrLn (specialBirthday 25)
+ putStrLn (specialBirthday 50)
+ putStrLn (specialBirthday 18)
+ putStrLn (specialBirthday 1)
+ 
