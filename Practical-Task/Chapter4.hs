@@ -7,6 +7,27 @@ Use pattern matching to handle the following cases:
 "cloudy" → "A bit gloomy, but no rain yet!"
 Any other input should return "Weather unknown".
 
+     Using pattern matching 
+
+weatherReport :: String -> String
+weatherReport "sunny"  = "It's a bright and beautiful day!"
+weatherReport "rainy"  = "Don't forget your umbrella!"
+weatherReport "cloudy" = "A bit gloomy, but no rain yet!"
+weatherReport _        = "Weather unknown"
+
+main :: IO ()
+main = do
+  putStrLn (weatherReport "rainy")
+  putStrLn (weatherReport "sunny")
+  putStrLn (weatherReport "teslim")
+  putStrLn (weatherReport "cloudy")
+    --Output:
+    --Don't forget your umbrella!
+    --It's a bright and beautiful day!
+    --Weather unknown
+    --A bit gloomy, but no rain yet!
+
+        using it then else 
 
 weatherReport :: String -> String
 weatherReport condition =
