@@ -301,3 +301,26 @@ main = do
   putStrLn (firstAndThird [5])
   putStrLn (firstAndThird [1, 2])
   putStrLn (firstAndThird [1, 2, 3, 4])
+
+
+     Using if then else 
+
+
+firstAndThird :: [Int] -> String
+firstAndThird xs =
+  if null xs then
+    "The list is empty."
+  else if length xs == 1 then
+    "The list has one element: " ++ show (xs !! 0)
+  else if length xs == 2 then
+    "The list has two elements: " ++ show (xs !! 0) ++ " and " ++ show (xs !! 1)
+  else
+    "The list has three or more elements. First and Third are: "
+      ++ show (xs !! 0) ++ ", " ++ show (xs !! 2)
+
+main :: IO ()
+main = do
+  putStrLn (firstAndThird [])
+  putStrLn (firstAndThird [5])
+  putStrLn (firstAndThird [1, 2])
+  putStrLn (firstAndThird [1, 2, 3, 4])
