@@ -27,7 +27,7 @@ main = do
     --Weather unknown
     --A bit gloomy, but no rain yet!
 
-        using it then else 
+        using if then else 
 
 weatherReport :: String -> String
 weatherReport condition =
