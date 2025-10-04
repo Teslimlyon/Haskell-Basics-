@@ -324,3 +324,18 @@ main = do
   putStrLn (firstAndThird [5])
   putStrLn (firstAndThird [1, 2])
   putStrLn (firstAndThird [1, 2, 3, 4])
+
+
+
+
+describeTuple :: (String, Int) -> String
+describeTuple (word, num) =
+  word ++ " " ++ show num
+
+main :: IO ()
+main = do
+  putStrLn (describeTuple ("By next month I will be", 32))
+  putStrLn (describeTuple ("By next month I will be", 35))
+  
+--Output  By next month I will be 32
+        --By next month I will be 35
