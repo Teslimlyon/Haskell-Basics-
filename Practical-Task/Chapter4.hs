@@ -285,6 +285,7 @@ main = do
   putStrLn (whatsInsideThisList [1, 2])
   putStrLn (whatsInsideThisList [1, 2, 3, 4])
 
+
 --HC4T7 - Task 7: Ignore Elements in a List
 Modify firstAndThird to return only the first and third elements of a list, ignoring others
 
@@ -325,7 +326,8 @@ main = do
   putStrLn (firstAndThird [1, 2])
   putStrLn (firstAndThird [1, 2, 3, 4])
 
-
+--HC4T8 - Task 8: Extract Values from Tuples
+Create a function describeTuple that extracts values from a tuple and returns a string.
 
 
 describeTuple :: (String, Int) -> String
