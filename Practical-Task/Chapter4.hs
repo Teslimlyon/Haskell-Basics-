@@ -281,3 +281,19 @@ main = do
   putStrLn (whatsInsideThisList [5])
   putStrLn (whatsInsideThisList [1, 2])
   putStrLn (whatsInsideThisList [1, 2, 3, 4])
+
+
+
+firstAndThird :: [Int] -> String 
+firstAndThird [] = "The list is empty."
+firstAndThird [x] = "The list has one element: " ++ show x 
+firstAndThird [x, y] = "The list has two elements: " ++ show x ++ " and " ++ show y
+firstAndThird (x:y:z:_) = "The list has three or more elements. First and Third are: " 
+                                ++ show x ++ ", " ++ show z
+
+main :: IO ()
+main = do 
+  putStrLn (firstAndThird [])
+  putStrLn (firstAndThird [5])
+  putStrLn (firstAndThird [1, 2])
+  putStrLn (firstAndThird [1, 2, 3, 4])
