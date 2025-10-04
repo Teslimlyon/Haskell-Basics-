@@ -267,6 +267,9 @@ main = do
      --18th birthday in 2025!
      --First birthday in 2025!
 
+--HC4T6 - Task 6: Identify List Contents Using Pattern Matching
+Create a function whatsInsideThisList that returns a string based on the number of elements in a list.
+
 
 whatsInsideThisList :: [Int] -> String 
 whatsInsideThisList [] = "The list is empty."
