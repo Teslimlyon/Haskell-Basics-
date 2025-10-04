@@ -282,7 +282,8 @@ main = do
   putStrLn (whatsInsideThisList [1, 2])
   putStrLn (whatsInsideThisList [1, 2, 3, 4])
 
-
+--HC4T7 - Task 7: Ignore Elements in a List
+Modify firstAndThird to return only the first and third elements of a list, ignoring others
 
 firstAndThird :: [Int] -> String 
 firstAndThird [] = "The list is empty."
