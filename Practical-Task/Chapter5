@@ -1,3 +1,19 @@
-Chapter5 bb
-vmmbbbnn
- NB nn
+
+
+applyTwice :: (a -> a) -> a -> a
+applyTwice f x = f (f x)
+
+applyThrice :: (a -> a) -> a -> a
+applyThrice f x = f (applyTwice f x)
+
+multiply :: Int -> Int
+multiply n = n * 2
+
+main :: IO ()
+main = do
+  print (applyThrice multiply 2)
+  print (applyThrice multiply 3)
+    --Output 16
+          -- 24
+  
+  
