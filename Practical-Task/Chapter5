@@ -1,3 +1,5 @@
+--HC5T1: Using applyTwice
+Define a function that takes a function and an integer, then applies the function three times to the integer
 
 
 applyTwice :: (a -> a) -> a -> a
