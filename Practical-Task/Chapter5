@@ -50,7 +50,8 @@ main = do
     --Output 8
           -- 9
   
-
+--HC5T2: Filtering Odd Numbers
+Use the filter function to extract all odd numbers from a given list of integers from 1 to 30
 
 isOdd :: Int -> Bool 
 isOdd x = x `mod` 2 /= 0 
