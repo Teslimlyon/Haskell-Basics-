@@ -16,4 +16,21 @@ main = do
     --Output 16
           -- 24
   
+applyTwice :: (a -> a) -> a -> a
+applyTwice f x = f (f x)
+
+applyThrice :: (a -> a) -> a -> a
+applyThrice f x = f (applyTwice f x)
+
+add :: Int -> Int
+add n = n + 2
+
+main :: IO ()
+main = do
+  print (applyThrice add 2)
+  print (applyThrice add 3)
+    --Output 8
+          -- 9
+  
+  
   
