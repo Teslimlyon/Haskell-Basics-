@@ -61,8 +61,19 @@ main = do
  let oddNumber = filter isOdd number
  print oddNumber
 --Output[1,3,5,7,9,11,13,15,17,19,21,23,25,27,29]
- 
+
+
+ /= → checks if they are not equal 
  == → checks if they are equal
 
-/= → checks if they are not equal 
   
+isEven :: Int -> Bool 
+isEven x = x `mod` 2 == 0 
+
+main :: IO ()
+main = do 
+ let number = [1..30]
+ let evenNumber = filter isEven number
+ print evenNumber
+--Output[2,4,6,8,10,12,14,16,18,20,22,24,26,28,30]
+ 
