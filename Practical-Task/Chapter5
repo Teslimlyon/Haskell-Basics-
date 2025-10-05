@@ -6,6 +6,24 @@ applyTwice f x = f (f x)
 applyThrice :: (a -> a) -> a -> a
 applyThrice f x = f (applyTwice f x)
 
+square :: Int -> Int
+square x = x * x
+
+main :: IO ()
+main = do
+  print (applyThrice square 2)
+  print (applyThrice square 3)
+    --Output 256
+          -- 6561
+  
+  
+
+applyTwice :: (a -> a) -> a -> a
+applyTwice f x = f (f x)
+
+applyThrice :: (a -> a) -> a -> a
+applyThrice f x = f (applyTwice f x)
+
 multiply :: Int -> Int
 multiply n = n * 2
 
