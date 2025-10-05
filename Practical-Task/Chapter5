@@ -16,9 +16,7 @@ main = do
     --Output 256
           -- 6561
   
-  
-
-applyTwice :: (a -> a) -> a -> a
+  applyTwice :: (a -> a) -> a -> a
 applyTwice f x = f (f x)
 
 applyThrice :: (a -> a) -> a -> a
