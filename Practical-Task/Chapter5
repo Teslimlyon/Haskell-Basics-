@@ -78,3 +78,21 @@ main = do
  print evenNumber
 --Output[2,4,6,8,10,12,14,16,18,20,22,24,26,28,30]
  
+
+
+import Data.Char (isUpper)
+
+anyUpper :: [String] -> Bool
+anyUpper words = any (\word -> not (null word) && isUpper (head word)) words
+
+main :: IO ()
+main = do
+  print (anyUpper ["Teslim"])
+  print (anyUpper ["kennY"])
+  print (anyUpper ["Grace"])
+  print (anyUpper [])
+  
+ --Output:  True 
+          --False
+          --True
+          --False
