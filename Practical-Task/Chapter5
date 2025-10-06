@@ -100,3 +100,22 @@ main = do
           --False
           --True
           --False
+
+import Data.Char (isUpper)
+
+anyUpper :: [String] -> String
+anyUpper words
+  | any (\word -> not (null word) && isUpper (head word)) words = "Contains uppercase word"
+  | otherwise = "No uppercase word"
+
+main :: IO ()
+main = do
+  putStrLn (anyUpper ["Teslim"])
+  putStrLn (anyUpper ["kenny"])
+  putStrLn (anyUpper ["Grace"])
+  putStrLn (anyUpper [])
+  
+  --Output Contains Uppercase word
+         --No Uppercase word
+         --Contains Uppercase word
+         --No Uppercase word 
