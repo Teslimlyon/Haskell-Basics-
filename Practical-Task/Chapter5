@@ -101,6 +101,8 @@ main = do
           --True
           --False
 
+Modified version that returns a message instead of just True or False
+
 import Data.Char (isUpper)
 
 anyUpper :: [String] -> String
