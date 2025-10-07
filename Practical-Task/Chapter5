@@ -170,3 +170,14 @@ main = do
          -- 125
          -- 50
  
+
+
+squareEvens :: [Int] -> [Int]
+squareEvens = filter even . map (^2)
+
+main :: IO ()
+main = do 
+ print (squareEvens [1..10])
+ 
+  --Ouytput [4,16,36,64,100]
+  
