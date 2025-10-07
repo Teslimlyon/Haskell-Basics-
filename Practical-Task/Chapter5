@@ -122,7 +122,9 @@ main = do
          --Contains Uppercase word
          --No Uppercase word 
 
-
+--HC5T4: Using Lambda Functions
+Rewrite the following function using a lambda function:
+biggerThan10 x = x > 10
 
 biggerThan10 :: Int -> Bool
 biggerThan10 = \x -> x > 10
