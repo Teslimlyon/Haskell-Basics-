@@ -170,7 +170,8 @@ main = do
          -- 125
          -- 50
  
-
+--HC5T6: Function Composition
+Use function composition (.) to create a function that takes a list of numbers and returns their squares filtered to only keep the even ones.
 
 squareEvens :: [Int] -> [Int]
 squareEvens = filter even . map (^2)
