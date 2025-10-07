@@ -181,3 +181,13 @@ main = do
  
   --Ouytput [4,16,36,64,100]
   
+
+squareOdds :: [Int] -> [Int]
+squareOdds = filter odd . map (^2)
+
+main :: IO ()
+main = do 
+ print (squareOdds [1..10])
+ 
+  --Ouytput [1,9,25,49,81]
+  
