@@ -121,3 +121,18 @@ main = do
          --No Uppercase word
          --Contains Uppercase word
          --No Uppercase word 
+
+
+
+biggerThan10 :: Int -> Bool
+biggerThan10 = \x -> x > 10
+
+main :: IO ()
+main = do
+ print (biggerThan10 5)
+ print (biggerThan10 25)
+ print (biggerThan10 10)
+
+  --Output False
+        -- True
+        -- False
