@@ -156,3 +156,17 @@ main = do
          -- 125
          -- 50
  
+
+multiplyBy5 :: Int -> Int
+multiplyBy5 = (*) 5
+
+main :: IO ()
+main = do
+ print (multiplyBy5 5)
+ print (multiplyBy5 25)
+ print (multiplyBy5 10)
+  
+   --Output 25
+         -- 125
+         -- 50
+ 
