@@ -140,6 +140,8 @@ main = do
         -- False
 
 
+--HC5T5: Partial Application
+Create a function multiplyByFive that uses partial application to multiply any number by 5.
 
 multiplyBy5 :: Int -> Int
 multiplyBy5 = \x -> x * 5
