@@ -192,3 +192,13 @@ main = do
  
   --Ouytput [1,9,25,49,81]
   
+
+-- Using the $ operator to simplify function application
+result :: Int
+result = sum $ map (*2) $ filter (>3) [1..10]
+
+main :: IO ()
+main = do
+  putStrLn "The result is:"
+  print result
+   --Output 98
