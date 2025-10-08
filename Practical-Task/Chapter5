@@ -206,3 +206,14 @@ main = do
   putStrLn "The result is:"
   print result
    --Output 98
+
+
+addFive :: Int -> Int
+addFive = (+ 5)
+
+main :: IO ()
+main = do
+  print (addFive 5)
+  print (addFive 25)
+   --Output 10
+         -- 30
