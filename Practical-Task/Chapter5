@@ -220,3 +220,15 @@ main = do
   print (addFive 25)
    --Output 10
          -- 30
+
+
+-- Define the higher-order function
+transformList :: (a -> a) -> [a] -> [a]
+transformList f = map (f . f)
+
+main :: IO ()
+main = do
+  print (transformList (*2) [1,2,3,4])
+  print (transformList (+1) [5,10,15])
+   --Output [4,8,12,16]
+         -- [7,12,17]
