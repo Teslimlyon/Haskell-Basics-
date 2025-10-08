@@ -221,6 +221,8 @@ main = do
    --Output 10
          -- 30
 
+--HC5T9: Higher-Order Function to Transform a List
+Write a higher-order function transformList that applies a given function twice to every element of a list.
 
 -- Define the higher-order function
 transformList :: (a -> a) -> [a] -> [a]
