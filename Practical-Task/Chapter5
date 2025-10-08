@@ -207,6 +207,9 @@ main = do
   print result
    --Output 98
 
+--HC5T8: Point-Free Style
+Convert the following function to point-free style:
+addFive x = x + 5
 
 addFive :: Int -> Int
 addFive = (+ 5)
