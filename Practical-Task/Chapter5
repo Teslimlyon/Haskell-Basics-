@@ -234,3 +234,14 @@ main = do
   print (transformList (+1) [5,10,15])
    --Output [4,8,12,16]
          -- [7,12,17]
+
+
+anySquareGreaterThan50 :: [Int] -> Bool
+anySquareGreaterThan50 xs = any (>50) (map (^2) (filter (>0) xs))
+
+main :: IO ()
+main = do
+  print (anySquareGreaterThan50 [3,5,6])
+  print (anySquareGreaterThan50 [8,2,5])
+  print (anySquareGreaterThan50 [1,2,3])  
+  print (anySquareGreaterThan50 [10,0,-3])
