@@ -235,6 +235,8 @@ main = do
    --Output [4,8,12,16]
          -- [7,12,17]
 
+--HC5T10: Combining Higher-Order Functions
+Combine filter, map, and any to create a function that checks if any squared value in a list is greater than 50.
 
 anySquareGreaterThan50 :: [Int] -> Bool
 anySquareGreaterThan50 xs = any (>50) (map (^2) (filter (>0) xs))
