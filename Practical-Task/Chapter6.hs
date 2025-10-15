@@ -50,6 +50,7 @@ main = do
  print $ productList [5,5,10]
   --Output 250
 
+
 --HC6T5: Reverse a List (Recursive)
 Implement a function that reverses a list using recursion.
 
