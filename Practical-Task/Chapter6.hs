@@ -11,6 +11,8 @@ main = do
  --Output 120
 
 
+--HC6T2: Fibonacci (Recursive)
+Implement a recursive function to compute the nth Fibonacci number
 
 fibonacci :: Integer -> Integer 
 fibonacci 0 = 0
