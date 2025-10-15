@@ -52,3 +52,20 @@ main :: IO ()
 main = do 
  print $ reverseList [2,5,10]
  --Output [10,5,2]
+
+
+
+elementExists :: (Eq a) => a -> [a] -> Bool
+elementExists _ [] = False 
+
+elementExists x (y:ys)
+ | x == y    = True 
+ | otherwise = elementExists x ys
+ 
+main :: IO () 
+main = do 
+ print $ elementExists 5 [2,5,3]
+ print $ elementExists 2 [3,4,1]
+ 
+  --Output True 
+        -- False 
