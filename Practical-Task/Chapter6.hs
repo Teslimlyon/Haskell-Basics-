@@ -68,7 +68,6 @@ main = do
 --HC6T6: Element Exists in List
 Implement a function that determines whether a given element exists in a list.
 
-
 elementExists :: (Eq a) => a -> [a] -> Bool
 elementExists _ [] = False 
 
