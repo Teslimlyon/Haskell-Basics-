@@ -30,3 +30,13 @@ main :: IO ()
 main = do 
  print $ sumList [5,5,10]
   --Output 20
+
+
+
+productList :: [Int] -> Int
+productList = foldr (*) 1
+
+main :: IO ()
+main = do 
+ print $ productList [5,5,10]
+  --Output 250
