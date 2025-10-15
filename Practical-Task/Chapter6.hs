@@ -40,3 +40,15 @@ main :: IO ()
 main = do 
  print $ productList [5,5,10]
   --Output 250
+
+
+
+reverseList:: [a] -> [a]
+reverseList [] = []
+
+reverseList (x:xs) = reverseList xs ++ [x]
+
+main :: IO ()
+main = do 
+ print $ reverseList [2,5,10]
+ --Output [10,5,2]
