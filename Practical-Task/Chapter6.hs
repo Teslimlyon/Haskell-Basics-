@@ -39,6 +39,8 @@ main = do
   --Output 20
 
 
+HC6T4: Product of Elements Using foldl
+Implement a function to compute the product of elements in a list using foldl
 
 productList :: [Int] -> Int
 productList = foldr (*) 1
