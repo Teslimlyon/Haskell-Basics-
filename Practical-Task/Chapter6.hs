@@ -20,3 +20,13 @@ main :: IO ()
 main = do 
  print $ fibonacci 10
   --Output 55
+
+
+
+sumList :: [Int] -> Int
+sumList = foldr (+) 0
+
+main :: IO ()
+main = do 
+ print $ sumList [5,5,10]
+  --Output 20
