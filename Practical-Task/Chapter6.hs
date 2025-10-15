@@ -27,6 +27,8 @@ main = do
   --Output 55
 
 
+HC6T3: Sum of Elements Using foldr
+Implement a function to compute the sum of elements in a list using foldr
 
 sumList :: [Int] -> Int
 sumList = foldr (+) 0
