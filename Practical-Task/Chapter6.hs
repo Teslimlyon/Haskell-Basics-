@@ -84,6 +84,9 @@ main = do
         -- False 
 
 
+--HC6T7: List Length
+Implement a function that takes a list and returns the length of the list.
+
 listLength :: [a] -> Int
 listLength lst = length lst
 
