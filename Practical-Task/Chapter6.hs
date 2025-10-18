@@ -138,3 +138,15 @@ main = do
      --Output 5
            -- 6
            -- 0
+
+
+
+
+filterEven :: [Int] -> [Int] 
+filterEven = filter even 
+
+main :: IO ()
+main = do 
+ print $ filterEven [1..10]
+ 
+  -- Output [2,4,6,8,10]
