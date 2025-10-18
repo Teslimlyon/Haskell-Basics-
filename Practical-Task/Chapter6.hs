@@ -169,7 +169,8 @@ main = do
           --[False,True,False,True]
 
 
-
+--HC6T10: Digits of a Number (Recursive)
+Implement a recursive function that takes a number and returns a list of its digits
 
 
 digits :: Int -> [Int]
