@@ -107,3 +107,19 @@ main = do
     putStrLn $ "The length of the list is: " ++ show (listLength myList)
 
  --Output: The length of the list is: 6
+          
+            or
+
+listLength :: [a] -> Int
+listLength [] = 0
+listLength (x:xs) = 1 + listLength xs
+
+main :: IO ()
+main = do
+    print (listLength [1, 2, 3, 4, 5])
+    print (listLength "Teslim")          
+    print (listLength [])       
+   --Output  5
+          -- 6
+          -- 0       
+    
