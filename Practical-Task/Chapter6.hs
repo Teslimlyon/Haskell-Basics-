@@ -162,8 +162,8 @@ myMap f (x:xs) = f x : myMap f xs
 main :: IO ()
 main = do
     print (myMap (*2) [1..4])     
-    print (myMap (++ "Teslim") ["My name is "]) 
+    putStrLn (head (myMap (++ "Teslim") ["My name is "]))
     print (myMap even [1..4])
   --Output:  [2,4,6,8]
-          -- ["My name is Teslim"]
+          -- My name is Teslim
           --[False,True,False,True]
