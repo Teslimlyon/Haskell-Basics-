@@ -90,6 +90,17 @@ listLength lst = length lst
 main :: IO ()
 main = do
     let myList = [1,2,3,4,5,6]
+    print (listLength myList)
+  --Output: 6
+
+         or
+
+listLength :: [a] -> Int
+listLength lst = length lst
+
+main :: IO ()
+main = do
+    let myList = [1,2,3,4,5,6]
     putStrLn $ "The length of the list is: " ++ show (listLength myList)
 
  --Output: The length of the list is: 6
