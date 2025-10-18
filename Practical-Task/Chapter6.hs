@@ -123,3 +123,18 @@ main = do
           -- 6
           -- 0       
     
+            or
+
+listLength :: [a] -> Int
+listLength xs
+  | null xs   = 0
+  | otherwise = 1 + listLength (tail xs)
+
+main :: IO ()
+main = do
+    print (listLength [1, 2, 3, 4, 5])
+    print (listLength "Teslim")          
+    print (listLength [])                
+     --Output 5
+           -- 6
+           -- 0
