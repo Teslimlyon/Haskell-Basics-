@@ -143,7 +143,6 @@ main = do
 --HC6T8: Filter Even Numbers
 Implement a function that filters all even numbers from a list.
 
-
 filterEven :: [Int] -> [Int] 
 filterEven = filter even 
 
