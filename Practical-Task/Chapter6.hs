@@ -152,7 +152,8 @@ main = do
  
   -- Output [2,4,6,8,10]
 
---Implement a function that applies a given function to each element of a list (map implementation).
+--HC6T9: Map Implementation
+Implement a function that applies a given function to each element of a list (map implementation).
 
 myMap :: (a -> b) -> [a] -> [b]
 myMap _ [] = []
