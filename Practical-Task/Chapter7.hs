@@ -145,3 +145,15 @@ main = do
   print (squareArea (4 :: Int))      -- 16
   print (squareArea (5.5 :: Double)) -- 30.25
   print (squareArea (7 :: Float))    -- 49.0
+
+
+
+-- HC7T6: Using Integral and Floating Type Classes
+
+circleCircumference :: (Real a, Floating b) => a -> b
+circleCircumference r = 2 * pi * realToFrac r
+
+main :: IO ()
+main = do
+  print (circleCircumference (5 :: Int))     -- 31.41592653589793
+  print (circleCircumference (3.5 :: Double)) -- 21.991148575128552
