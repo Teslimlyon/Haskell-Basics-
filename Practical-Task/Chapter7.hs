@@ -188,3 +188,17 @@ main = do
   print (nextColor Red)    -- Green
   print (nextColor Green)  -- Blue
   print (nextColor Blue)   -- Red
+
+
+-- HC7T8: Parse a Value from a String Using Read
+
+data Shape = Circle Double | Rectangle Double Double
+  deriving (Show, Read)
+
+parseShape :: String -> Shape
+parseShape str = read str
+
+main :: IO ()
+main = do
+  print (parseShape "Circle 5.0")         -- Circle 5.0
+  print (parseShape "Rectangle 4.0 6.0")  -- Rectangle 4.0 6.0
