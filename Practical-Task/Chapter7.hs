@@ -95,3 +95,30 @@ main = do
   print r
   print (read "Circle 5.0" :: Shape)
   print (read "Rectangle 4.0 6.0" :: Shape)
+
+
+-- HC7T4: Custom Type with Show and Read
+
+data Shape = Circle Double | Rectangle Double Double
+
+instance Show Shape where
+  show (Circle r) = "Circle with radius " ++ show r
+  show (Rectangle w h) = "Rectangle with width " ++ show w ++ " and height " ++ show h
+
+instance Read Shape where
+  readsPrec _ input =
+    case words input of
+      ["Circle", r] ->
+        [(Circle (read r), "")]
+      ["Rectangle", w, h] ->
+        [(Rectangle (read w) (read h), "")]
+      _ -> []
+
+main :: IO ()
+main = do
+  let c = Circle 5.0
+  let r = Rectangle 4.0 6.0
+  print c
+  print r
+  print (read "Circle 5.0" :: Shape)
+  print (read "Rectangle 4.0 6.0" :: Shape)
