@@ -171,3 +171,20 @@ main = do
   print (circleCircumference (7 :: Integer))  -- 43.982297150257104
   print (circleCircumference (3.5 :: Double)) -- 21.991148575128552
   print (circleCircumference (2.7 :: Float))  -- 16.964601533075506
+
+
+-- HC7T7: Bounded and Enum
+
+data Color = Red | Green | Blue
+  deriving (Eq, Show, Enum, Bounded)
+
+nextColor :: Color -> Color
+nextColor c
+  | c == maxBound = minBound
+  | otherwise     = succ c
+
+main :: IO ()
+main = do
+  print (nextColor Red)    -- Green
+  print (nextColor Green)  -- Blue
+  print (nextColor Blue)   -- Red
