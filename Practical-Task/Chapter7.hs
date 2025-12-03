@@ -51,3 +51,6 @@ main = do
   print (Green < Blue)   -- True
   print (Blue > Red)     -- True
   print (Red == Red)     -- True
+
+
+
