@@ -79,3 +79,19 @@ main = do
   print (compareValues 10 20)     -- 20
   print (compareValues 'a' 'z')   -- 'z'
   print (compareValues 3.5 2.1)   -- 3.5
+
+
+
+-- HC7T4: Custom Type with Show and Read
+
+data Shape = Circle Double | Rectangle Double Double
+  deriving (Show, Read)
+
+main :: IO ()
+main = do
+  let c = Circle 5.0
+  let r = Rectangle 4.0 6.0
+  print c
+  print r
+  print (read "Circle 5.0" :: Shape)
+  print (read "Rectangle 4.0 6.0" :: Shape)
