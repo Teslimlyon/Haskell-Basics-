@@ -133,3 +133,15 @@ main :: IO ()
 main = do
   print (squareArea 4)     -- 16
   print (squareArea 5.5)   -- 30.25
+
+
+-- HC7T5: Function with Num Constraint
+
+squareArea :: Num a => a -> a
+squareArea side = side * side
+
+main :: IO ()
+main = do
+  print (squareArea (4 :: Int))      -- 16
+  print (squareArea (5.5 :: Double)) -- 30.25
+  print (squareArea (7 :: Float))    -- 49.0
