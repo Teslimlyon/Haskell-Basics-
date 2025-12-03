@@ -122,3 +122,14 @@ main = do
   print r
   print (read "Circle 5.0" :: Shape)
   print (read "Rectangle 4.0 6.0" :: Shape)
+
+
+-- HC7T5: Function with Num Constraint
+
+squareArea :: Num a => a -> a
+squareArea side = side * side
+
+main :: IO ()
+main = do
+  print (squareArea 4)     -- 16
+  print (squareArea 5.5)   -- 30.25
