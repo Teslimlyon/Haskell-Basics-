@@ -13,3 +13,20 @@ main = do
   print (Red == Red)
   print (Green == Blue)
   print (Blue == Blue)
+
+
+-- HC7T1: Implement the Eq type class for Color
+
+data Color = Red | Green | Blue deriving (Show)
+
+instance Eq Color where
+  (==) Red Red     = True
+  (==) Green Green = True
+  (==) Blue Blue   = True
+  (==) _ _         = False
+
+main :: IO ()
+main = do
+  print (Red == Red)
+  print (Green == Blue)
+  print (Blue == Blue)
