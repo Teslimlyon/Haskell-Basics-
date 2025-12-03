@@ -202,3 +202,22 @@ main :: IO ()
 main = do
   print (parseShape "Circle 5.0")         -- Circle 5.0
   print (parseShape "Rectangle 4.0 6.0")  -- Rectangle 4.0 6.0
+
+
+
+
+-- HC7T8: Parse a Value from a String Using Read Safely
+
+data Shape = Circle Double | Rectangle Double Double
+  deriving (Show, Read)
+
+parseShape :: String -> Maybe Shape
+parseShape str = case reads str of
+  [(shape, "")] -> Just shape
+  _             -> Nothing
+
+main :: IO ()
+main = do
+  print (parseShape "Circle 5.0")         -- Just (Circle 5.0)
+  print (parseShape "Rectangle 4.0 6.0")  -- Just (Rectangle 4.0 6.0)
+  print (parseShape "Triangle 3.0 4.0")   -- Nothing
