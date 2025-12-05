@@ -221,3 +221,30 @@ main = do
   print (parseShape "Circle 5.0")         -- Just (Circle 5.0)
   print (parseShape "Rectangle 4.0 6.0")  -- Just (Rectangle 4.0 6.0)
   print (parseShape "Triangle 3.0 4.0")   -- Nothing
+
+
+
+-- HC7T9: Type Class with Multiple Instances
+
+data Shape = Circle Double | Square Double | Rectangle Double Double
+  deriving (Show, Read)
+
+class Describable a where
+  describe :: a -> String
+
+instance Describable Bool where
+  describe True  = "This is True — represents a positive or on state."
+  describe False = "This is False — represents a negative or off state."
+
+instance Describable Shape where
+  describe (Circle r) = "A circle with radius " ++ show r
+  describe (Square s) = "A square with side length " ++ show s
+  describe (Rectangle w h) = "A rectangle with width " ++ show w ++ " and height " ++ show h
+
+main :: IO ()
+main = do
+  print $ describe True
+  print $ describe False
+  print $ describe (Circle 5)
+  print $ describe (Square 3)
+  print $ describe (Rectangle 4 6)
