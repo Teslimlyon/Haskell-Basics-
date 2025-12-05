@@ -248,3 +248,42 @@ main = do
   print $ describe (Circle 5)
   print $ describe (Square 3)
   print $ describe (Rectangle 4 6)
+
+
+
+-- HC7T10: Function with Multiple Type Class Constraints
+
+data Shape = Circle Double | Square Double | Rectangle Double Double
+  deriving (Show, Read, Eq)
+
+area :: Shape -> Double
+area (Circle r) = pi * r * r
+area (Square s) = s * s
+area (Rectangle w h) = w * h
+
+instance Ord Shape where
+  compare s1 s2 = compare (area s1) (area s2)
+
+class Describable a where
+  describe :: a -> String
+
+instance Describable Bool where
+  describe True  = "This is True — represents a positive or on state."
+  describe False = "This is False — represents a negative or off state."
+
+instance Describable Shape where
+  describe (Circle r) = "A circle with radius " ++ show r
+  describe (Square s) = "A square with side length " ++ show s
+  describe (Rectangle w h) = "A rectangle with width " ++ show w ++ " and height " ++ show h
+
+describeAndCompare :: (Describable a, Ord a) => a -> a -> String
+describeAndCompare x y =
+  if x > y
+    then "Larger value: " ++ describe x
+    else "Larger value: " ++ describe y
+
+main :: IO ()
+main = do
+  print $ describeAndCompare True False
+  print $ describeAndCompare (Circle 5) (Square 4)
+  print $ describeAndCompare (Rectangle 3 6) (Square 7)
